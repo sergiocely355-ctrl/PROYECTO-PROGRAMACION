@@ -64,14 +64,14 @@ Si es válido se eliminan los espacios innecesarios y se convierte en el nombre 
         return self._nombre
 
     @nombre.setter
-    # Permite consultar el nombre que quedó guardado.
+    # Permite Modificar y validar el nombre.
     def nombre(self, valor):
         if not isinstance(valor, str) or len(valor.strip()) < 2:
             raise DatosInvalidosError("El nombre debe tener al menos dos caracteres.")
         self._nombre = valor.strip().title()
 
     @property
-    # Se utiliza para consultar el correo después de validarlo.
+    # Se utiliza para Modificar y validar el correo electrónico
     def correo(self):
         return self._correo
 
@@ -95,7 +95,7 @@ Cuando cumple con las condiciones elimina espacios innecesarios y convierte el t
         self._correo = valor.strip().lower()
 
     @property
-    # Devuelve el teléfono que pasó la validación.
+    # se utiliza para Modificar y validar el teléfono
     def telefono(self):
         return self._telefono
 
