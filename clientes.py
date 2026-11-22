@@ -121,8 +121,22 @@ Cuando cumple con las condiciones elimina espacios innecesarios y convierte el t
 
     # Prepara un resumen del cliente para mostrarlo en pantalla.
     def describir(self):
+        """
+        Genera una inscripción de datos principales de cliente 
+
+Returns:
+str: toda la información del cliente nombre correo electrónico y teléfono
+"""
         return f"Cliente {self.nombre} | correo: {self.correo} | teléfono: {self.telefono}"
 
     # Define cómo se muestra el cliente cuando se imprime directamente.
     def __str__(self):
+        """
+        Define la representación del texto del objeto cliente 
+
+Returns:
+str: identificador y el nombre del cliente 
+
+Nos muestra la información resumida del cliente cuando se realiza la función print ()
+"""
         return f"{self.identificador} - {self.nombre}"
