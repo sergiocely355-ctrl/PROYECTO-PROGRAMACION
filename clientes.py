@@ -100,11 +100,23 @@ Cuando cumple con las condiciones elimina espacios innecesarios y convierte el t
         return self._telefono
 
     @telefono.setter
-    # Devuelve el teléfono que pasó la validación.
+    """
+    Obtiene el número telefónico del cliente 
+
+Returns:
+str: número de teléfono almacenado en el sistema
+"""
     def telefono(self, valor):
         numero = str(valor).strip()
         if not numero.isdigit() or not 7 <= len(numero) <= 15:
             raise DatosInvalidosError("El teléfono debe contener entre 7 y 15 dígitos.")
+       """
+       Aquí se valida y se establece el correo electrónico. 
+
+Se comprueba que el correo electrónico tenga la misma estructura válida mediante una expresión regular 
+
+Cuando cumple con las condiciones elimina espacios innecesarios y convierte el texto a minúsculas
+"""
         self._telefono = numero
 
     # Prepara un resumen del cliente para mostrarlo en pantalla.
