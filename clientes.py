@@ -19,14 +19,28 @@ from excepciones import DatosInvalidosError, ParametroFaltanteError
 
 class Cliente(Entidad):
 
-    # Al crear el cliente se comprueba que lleguen los datos obligatorios y luego se asignan usando sus propiedades.
+    """
+    Constructor de la clase Cliente.
+
+    Parámetros:
+        identificador: código único del cliente.
+        nombre: nombre completo del cliente.
+        correo: dirección de correo electrónico.
+        telefono: número de contacto.
+
+    Comprueba que los datos obligatorios estén presentes,
+    inicializa los atributos y utiliza las propiedades
+    para validar la información.
+    """
     def __init__(self, identificador, nombre, correo, telefono):
         if nombre is None or correo is None or telefono is None:
             raise ParametroFaltanteError("Faltan datos obligatorios del cliente (nombre, correo o teléfono).")
         super().__init__(identificador)
+        # Inician los atributos privados
         self._nombre = None
         self._correo = None
         self._telefono = None
+        # Se asigna el nombre mediante su propiedad y se valida
         self.nombre = nombre
         self.correo = correo
         self.telefono = telefono
