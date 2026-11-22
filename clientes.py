@@ -5,9 +5,13 @@ Ese documento contiene la clase cliente encargada de registrar y administrar la 
 Nos permite almacenar su nombre correo electrónico teléfono aplicando validaciones para garantizar que todos los datos ingresados sean correctos."""
 
 import re  
+# Librería utilizada para validar el formato correcto de correo electrónico
 
 from entidades import Entidad  
+# Importa la clase base entidad para aplicar el principio de herencia
 from excepciones import DatosInvalidosError, ParametroFaltanteError  
+# Importa las excepciones personalizadas para controlar todos los errores
+# Cuando faltan datos o cuando la información no es válida
 
 
 # Representa a una persona que puede solicitar alguno de los servicios.
