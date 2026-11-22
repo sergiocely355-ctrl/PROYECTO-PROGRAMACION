@@ -1,4 +1,8 @@
-"""En este archivo está la clase Cliente. Aquí se guardan los datos de cada persona y se revisa que tengan un formato válido."""
+"""Archivo: clientes.py 
+
+Descripción: 
+Ese documento contiene la clase cliente encargada de registrar y administrar la información de los clientes del sistema. 
+Nos permite almacenar su nombre correo electrónico teléfono aplicando validaciones para garantizar que todos los datos ingresados sean correctos."""
 
 import re  
 
