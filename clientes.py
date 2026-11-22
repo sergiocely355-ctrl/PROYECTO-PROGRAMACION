@@ -14,7 +14,9 @@ from excepciones import DatosInvalidosError, ParametroFaltanteError
 # Cuando faltan datos o cuando la información no es válida
 
 
-# Representa a una persona que puede solicitar alguno de los servicios.
+# Aquí se define las clases cliente, que hereda la identidad
+# La función es almacenar y validar todos los datos personales de los clientes registrados en el sistema
+
 class Cliente(Entidad):
 
     # Al crear el cliente se comprueba que lleguen los datos obligatorios y luego se asignan usando sus propiedades.
