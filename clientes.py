@@ -76,7 +76,19 @@ Si es válido se eliminan los espacios innecesarios y se convierte en el nombre 
         return self._correo
 
     @correo.setter
-    # Se utiliza para consultar el correo después de validarlo.
+    """
+    Se obtiene la dirección de correo electrónico almacenada para el cliente 
+
+Returns:
+str: correo electrónico del cliente.
+"""
+"""
+Aquí se valida y se establece el correo electrónico. 
+
+Se comprueba que el correo electrónico tenga la misma estructura válida mediante una expresión regular 
+
+Cuando cumple con las condiciones elimina espacios innecesarios y convierte el texto a minúsculas
+"""
     def correo(self, valor):
         if not isinstance(valor, str) or not re.fullmatch(r"[^@\s]+@[^@\s]+\.[^@\s]+", valor.strip()):
             raise DatosInvalidosError("El correo electrónico no tiene un formato válido.")
