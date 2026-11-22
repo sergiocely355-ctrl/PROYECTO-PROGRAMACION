@@ -48,6 +48,19 @@ class Cliente(Entidad):
     @property
     # Permite consultar el nombre que quedó guardado.
     def nombre(self):
+        """Se obtiene el nombre del cliente 
+
+Returns:
+str: nombre archivado del cliente
+"""
+
+ """ 
+Se establece y valida el nombre del cliente 
+
+Se verifica que el valor sea texto y tenga como mínimo dos caracteres 
+
+Si es válido se eliminan los espacios innecesarios y se convierte en el nombre al formato de título
+"""
         return self._nombre
 
     @nombre.setter
